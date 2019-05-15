@@ -154,7 +154,8 @@ install_istio() {
   kubectl apply -f ${KUBEFLOW_K8S_MANIFESTS_DIR}/istio-crds.yaml
   kubectl apply -f ${KUBEFLOW_K8S_MANIFESTS_DIR}/istio-noauth.yaml
 
-  kubectl label namespace ${K8S_NAMESPACE} istio-injection=enabled --overwrite
+  # istio-injection is not yet available
+  #kubectl label namespace ${K8S_NAMESPACE} istio-injection=enabled --overwrite
 }
 
 ################################ Ksonnet changes ################################
